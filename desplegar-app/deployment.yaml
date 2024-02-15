@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demodeploy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: demodeploy
+  template:
+    metadata:
+      labels:
+        app: demodeploy
+    spec:
+      containers:
+      - name: demodeploy
+        image: nginx
+        ports:
+        - containerPort: 80

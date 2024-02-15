@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo
+  labels:
+    aplicacion: demo
+spec:
+  containers:
+  - name: demo
+    image: nginx
+    ports:
+      - containerPort: 80
