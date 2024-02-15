@@ -1,0 +1,4 @@
+# Curso de Kubernetes Gestionado en Data Center Designer
+Este curso de Kubernetes gestionado forma parte de una serie de cursos para aprender a sacar el máximo partido a Data Center Designer, la solución la solución Software-Defined Data Center de Arsys.
+En este caso, nos centramos en sus funcionalidades como servicio gestionado de Kubernetes, que combina lo mejor del cloud y lo mejor de la orquestación de contenedores, garantizando su fiabilidad y buenas prácticas.  Aunque se repasan numerosos aspectos de Kubernetes, este curso no pretende ser un curso completo sobre el sistema de orquestación de contenedores, pero sí incluye numerosos casos prácticos y diversos ejemplos para desplegar aplicaciones fácilmente y empezar a trabajar con Kubernetes.
+Disponible en YouTube: https://www.youtube.com/c/arsys
