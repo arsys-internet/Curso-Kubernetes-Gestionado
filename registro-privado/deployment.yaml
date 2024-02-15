@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demodeploy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: demodeploy
+  template:
+    metadata:
+      labels:
+        app: demodeploy
+    spec:
+      containers:
+      - name: demodeploy
+        image: democurso.cr.de-fra.ionos.com/go-hello-world
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: dcd

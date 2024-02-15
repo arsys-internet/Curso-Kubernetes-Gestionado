@@ -1,0 +1,30 @@
+initContainers:
+- name: velero-plugin-for-aws
+  image: velero/velero-plugin-for-aws:v1.8.2
+  imagePullPolicy: IfNotPresent
+  volumeMounts:
+  - mountPath: /target
+    name: plugins
+
+configuration:
+  backupStorageLocation:
+    - provider: velero.io/aws
+      name: ionos
+      bucket: k8sbackup
+      default: true
+      accessMode: ReadWrite
+      config:
+        region: eu-central-1
+        s3Url: https://s3-eu-central-1.ionoscloud.com
+  
+credentials:
+  name: ionos
+  useSecret: true
+  secretContents:
+    cloud: |
+      [default]
+      aws_access_key_id=008adef84c539d9193df
+      aws_secret_access_key=+Ibmjjp4lxfQLQ+/xgkbKh4GWL9UrcSbBDVaXmLB
+  
+snapshotsEnabled: false
+deployNodeAgent: true
